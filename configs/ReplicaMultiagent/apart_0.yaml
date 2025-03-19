@@ -1,0 +1,7 @@
+inherit_from: configs/ReplicaMultiagent/replica_multiagent.yaml
+config_path: configs/ReplicaMultiagent/apart_0.yaml
+data:
+  frame_limit: 2500
+  scene_name: apart_0
+  input_path: ReplicaMultiagent/Apart-0/
+  output_path: output/CP-SLAM_dataset/Apart-0/

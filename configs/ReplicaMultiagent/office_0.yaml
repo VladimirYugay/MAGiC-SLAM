@@ -1,0 +1,7 @@
+inherit_from: configs/ReplicaMultiagent/replica_multiagent.yaml
+config_path: configs/ReplicaMultiagent/office_0.yaml
+data:
+  frame_limit: 1500
+  scene_name: office_0
+  input_path: ReplicaMultiagent/Office-0/
+  output_path: output/CP-SLAM_dataset/Office-0/

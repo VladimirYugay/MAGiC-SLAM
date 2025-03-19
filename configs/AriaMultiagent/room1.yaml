@@ -1,0 +1,8 @@
+inherit_from: configs/AriaMultiagent/aria_multiagent.yaml
+config_path: configs/AriaMultiagent/room1.yaml
+data:
+  frame_limit: 500
+  scene_name: room1
+  input_path: AriaMultiagent/room1
+  output_path: output/AriaMultiagent/room1
+

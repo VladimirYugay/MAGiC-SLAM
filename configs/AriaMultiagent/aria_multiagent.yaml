@@ -1,0 +1,54 @@
+project_name: 'MAGiC-SLAM'
+dataset_name: 'aria'
+multi_gpu: True  # Put every agent on a separate GPU
+use_wandb: False
+wandb_offline: False
+experiment_name: "baseline"
+group_name: "aria_multiagent"
+seed: 0
+mapping:
+  new_submap_every: 20
+  map_every: 5
+  iterations: 100
+  new_submap_iterations: 1000
+  new_submap_points_num: 100000
+  new_submap_gradient_points_num: 50000
+  alpha_thre: 0.6
+  pruning_thre: 0.1
+  visualize: False
+tracking:
+  w_color_loss: 0.6
+  iterations: 200
+  cam_rot_lr: 0.002
+  cam_trans_lr: 0.01
+  odometry_type: "odometer"  # gt, const_speed, odometer
+  init_err_ratio: 5
+  odometer_method: "point_to_plane" # hybrid or point_to_plane 
+  filter_outlier_depth: False
+  alpha_thre: 0.98
+  soft_alpha: True
+  mask_invalid_depth: True
+loop_detection:
+  # feature_extractor_name: "netvlad"
+  # weights_path: "<path_to>/TokyoTM_struct.mat"
+  # embed_size: 4096
+  # feature_dist_threshold: .8
+  feature_extractor_name: "dino"  # netvlad
+  weights_path: "facebook/dinov2-small"
+  embed_size: 384
+  feature_dist_threshold: .35
+  device: cpu
+  time_threshold: 0
+  max_loops_per_frame: 1
+  fitness_threshold: 0.5
+  inlier_rmse_threshold: 0.1
+cam:
+  H: 512
+  W: 512
+  fx: 280
+  fy: 280
+  cx: 255.5
+  cy: 255.5
+  depth_scale: 6553.5
+data:
+  agent_ids: [0, 1, 2]
