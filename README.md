@@ -27,7 +27,7 @@ Clone the repo:
 git clone https://github.com/VladimirYugay/MAGiC-SLAM.git
 ```
 
-Make sure that your ```gcc``` is at least of version 10, and ```nvcc --version``` matches ```nvidia-smi``` version.
+We tested the installation with ```gcc``` and ```g++``` of versions 10, 11 and 12. Also, make sure that ```nvcc --version``` matches ```nvidia-smi``` version.
 
 Run the following commands to set up the environment
 ```
