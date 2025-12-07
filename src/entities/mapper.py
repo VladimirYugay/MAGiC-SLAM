@@ -135,7 +135,7 @@ class Mapper(object):
 
                 with torch.no_grad():
 
-                    if iteration == iterations // 2 or iteration == iterations:
+                    if iteration == iterations // 2:
                         prune_mask = (gaussian_model.get_opacity() < self.pruning_thre).squeeze()
                         gaussian_model.prune_points(prune_mask)
 
