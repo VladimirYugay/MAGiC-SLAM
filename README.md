@@ -70,7 +70,12 @@ Here we elaborate on how to load the necessary data, configure Gaussian-SLAM for
   <code>git lfs install</code> <br>
   <code>git clone https://huggingface.co/datasets/voviktyl/ReplicaMultiagent</code> <br>
 
-  **AriaMultiagent** consists of clips from <a href="https://www.projectaria.com/datasets/adt/">AriaDigitalTwin</a>. First, download raw AriaDigitalTwin sequences following instructions <a href="https://www.projectaria.com/datasets/adt/">here</a>. We recommend using the data tools described <a href="https://facebookresearch.github.io/projectaria_tools/docs/open_datasets/aria_digital_twin_dataset/dataset_download">here</a>. You can find the names of the raw videos we used in <code>prepare_aria_room_data.py</code> in <code>DATASET_DICT</code>. After you have downloaded the raw videos, process them using <code>prepare_aria_room_data.py</code>. This will create a folder with the format matching our repository.
+  **AriaMultiagent** consists of clips from <a href="https://www.projectaria.com/datasets/adt/">AriaDigitalTwin</a>. 
+  You can download already processed data with the command: <br>
+  <code>git clone https://huggingface.co/datasets/voviktyl/AriaMultiagent</code> <br>
+  
+  Alternatively, you can create the data yourself.
+  First, download raw AriaDigitalTwin sequences following instructions <a href="https://www.projectaria.com/datasets/adt/">here</a>. We recommend using the data tools described <a href="https://facebookresearch.github.io/projectaria_tools/docs/open_datasets/aria_digital_twin_dataset/dataset_download">here</a>. You can find the names of the raw videos we used in <code>prepare_aria_room_data.py</code> in <code>DATASET_DICT</code>. After you have downloaded the raw videos, process them using <code>prepare_aria_room_data.py</code>. This will create a folder with the format matching our repository.
   
   </details>
 
